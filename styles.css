@@ -1,0 +1,236 @@
+:root {
+     --navbar-shadow-color: rgba(155, 192, 230, 0.4);
+     --card-shadow-color: rgba(155, 192, 230, 0.4);
+     --text-shadow-color: rgba(0, 0, 0, 0.25);
+     --button-shadow-color: rgba(142, 162, 134, 0.25);
+     --container-background-color: #EAF1F9;
+     --navbar-background-color: #FFFFFF;
+     --button-background-color: #8EA286;
+     --title-background-color: #9BC0E6;
+     --alert-title-background-color: #F71B1B;
+}
+
+@font-face {
+  font-family: 'whitney-semibold';
+  src: url('fonts/whitney-semibold/whitney-semibold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/whitney-semibold/whitney-semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/whitney-semibold/whitney-semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/whitney-semibold/whitney-semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/whitney-semibold/whitney-semibold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'whitney-bold';
+  src: url('fonts/whitney-bold/whitney-bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/whitney-bold/whitney-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/whitney-bold/whitney-bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/whitney-bold/whitney-bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/whitney-bold/whitney-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'baskerville';
+  src: url('fonts/baskerville/baskerville.eot'); /* IE9 Compat Modes */
+  src: url('fonts/baskerville/baskerville.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/baskerville/baskerville.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/baskerville/baskerville.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/baskerville/baskerville.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'baskerville-semibold';
+  src: url('fonts/baskerville-semibold/baskerville-semibold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/baskerville-semibold/baskerville-semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/baskerville-semibold/baskerville-semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/baskerville-semibold/baskerville-semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/baskerville-semibold/baskerville-semibold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'baskerville-bold';
+  src: url('fonts/baskerville-bold/baskerville-bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/baskerville-bold/baskerville-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/baskerville-bold/baskerville-bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/baskerville-bold/baskerville-bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/baskerville-bold/baskerville-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+.divider {
+     background-color: black;
+
+     height: 4px;
+     width: 100%;
+
+     border-radius: 12px;
+}
+
+.date-day-of-week {
+     font-size: 24px;
+     font-family: 'whitney-semibold';
+}
+
+.date-month {
+     font-size: 24px;
+     font-family: 'whitney-bold';
+}
+
+.date-day {
+     font-size: 44px;
+     font-family: 'whitney-bold';
+}
+
+.date-year {
+     font-size: 24px;
+     font-family: 'whitney-bold';
+}
+
+.meeting-building {
+     font-size: 20px;
+     font-family: 'whitney-semibold';
+}
+
+.meeting-room {
+     font-size: 24px;
+     font-family: 'whitney-semibold';
+}
+
+html, body {
+     width: 100vw;
+     height: 100vh;
+
+     margin: 0;
+     padding: 0;
+
+     background-color: var(--container-background-color, lightgray);
+}
+
+.sticky-top {
+     top: 3em;
+}
+
+.container-fluid {
+     padding: 0;
+     padding-bottom: 16px;
+}
+
+.navbar {
+     background-color: var(--navbar-background-color, white);
+
+     height: 8vh;
+
+     box-shadow: 0px 0px 16px 16px var(--navbar-shadow-color, black);
+}
+
+.navbar-brand img {
+     width: 6%;
+     height: 6%;
+}
+
+.navbar-nav li {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.navbar-nav li a {
+     font-size: 18px !important;
+     font-family: 'whitney-semibold';
+
+     transition: color, text-shadow 0.5s;
+}
+
+.navbar-nav li a:hover,a:focus {
+     color: var(--button-background-color, green);
+
+     text-shadow: 0px 0px 16px var(--button-shadow-color, green) !important;
+}
+
+.join-item {
+     background-color: var(--button-background-color, green);
+
+     width: 6vw;
+
+     border-radius: 12px;
+}
+
+.join-item a {
+     border-radius: 12px;
+
+     color: white !important;
+     text-align: center;
+     text-transform: uppercase;
+
+     transition: color, box-shadow 0.5s;
+}
+
+.navbar-nav li .join-item a:hover,a:focus {
+     color: white !important;
+
+     box-shadow: 0px 0px 8px 8px var(--button-shadow-color, green);
+}
+
+.content-card {
+     margin: 32px;
+}
+
+.content-card h1 {
+     text-shadow: 0px 0px 16px var(--text-shadow-color, black);
+     font-family: 'baskerville-bold';
+}
+
+.content-card .card {
+     box-shadow: 0px 0px 16px 16px var(--card-shadow-color, black);
+
+     border: none;
+     border-radius: 12px;
+}
+
+.content-card .card .card-title {
+     background-color: var(--title-background-color, blue);
+
+     min-height: 52px;
+
+     margin: 0;
+     padding-left: 1.25rem;
+     padding-right: 1.25rem;
+     padding-top: 16px;
+     padding-bottom: 16px;
+
+     border-radius: 12px 12px 0 0;
+
+     display: flex;
+     align-items: center;
+     justify-content: left;
+}
+
+.content-card .card .card-title h4 {
+     margin:0;
+
+     color: white;
+     font-size: 24px;
+     font-family: 'baskerville-bold';
+}
+
+.content-card .card .card-body p {
+     margin: 0;
+
+     line-height: 2em;
+
+     font-family: 'helvetica';
+}
+
+#next-meeting-alert {
+     max-width: 216px;
+}
+
+#next-meeting-alert .card .card-title {
+     background-color: var(--alert-title-background-color, red);
+}
+
+#next-meeting-alert .card .card-title h4 {
+     width: 100%;
+     text-align: center;
+}
+
+#next-meeting-alert .card .card-body p {
+     text-align: center;
+}
