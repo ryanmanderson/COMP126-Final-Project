@@ -134,14 +134,6 @@ html, body {
 .navbar-nav li a {
      font-size: 18px !important;
      font-family: 'whitney-semibold';
-
-     transition: color, text-shadow 0.5s;
-}
-
-.navbar-nav li a:hover,a:focus {
-     color: var(--button-background-color, green);
-
-     text-shadow: 0px 0px 16px var(--button-shadow-color, green) !important;
 }
 
 .join-item {
@@ -162,7 +154,7 @@ html, body {
      transition: color, box-shadow 0.5s;
 }
 
-.navbar-nav li .join-item a:hover,a:focus {
+.join-item a:hover,a:focus {
      color: white !important;
 
      box-shadow: 0px 0px 8px 8px var(--button-shadow-color, green);
