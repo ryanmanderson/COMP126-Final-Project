@@ -55,6 +55,22 @@
        url('fonts/baskerville-bold/baskerville-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+input::-webkit-input-placeholder {
+     color: var(--button-background-color, green) !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+     color: var(--button-background-color, green) !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+     color: var(--button-background-color, green) !important;
+}
+
+input:-ms-input-placeholder {
+     color: var(--button-background-color, green) !important;
+}
+
 .divider {
      background-color: black;
 
@@ -92,6 +108,37 @@
 .meeting-room {
      font-size: 24px;
      font-family: 'whitney-semibold';
+}
+
+.button {
+     background-color: var(--button-background-color, green);
+
+     min-height: 44px;
+
+     border-radius: 12px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.button a {
+     border-radius: 12px;
+
+     color: white !important;
+     text-align: center;
+     text-transform: uppercase;
+
+     font-family: 'whitney-semibold';
+     font-size: 24px;
+
+     transition: color, box-shadow 0.5s;
+}
+
+.button a:hover,a:focus {
+     color: white !important;
+
+     box-shadow: 0px 0px 8px 8px var(--button-shadow-color, green);
 }
 
 html, body {
@@ -225,4 +272,30 @@ html, body {
 
 #next-meeting-alert .card .card-body p {
      text-align: center;
+}
+
+#search .card {
+     border-color: var(--button-background-color, green);
+     border-style: solid;
+     border-width: 4px;
+     border-radius: 12px;
+}
+
+#search .card-body {
+     padding: 8px;
+}
+
+#search input {
+     border: none;
+
+     color: black;
+     font-family: 'whitney-bold';
+     font-size: 24px;
+}
+
+#join-questions p {
+     margin-bottom: 16px;
+
+     font-family: 'whitney-semibold';
+     font-size: 22px;
 }
