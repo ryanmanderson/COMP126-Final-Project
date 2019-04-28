@@ -1,7 +1,9 @@
 :root {
      --navbar-shadow-color: rgba(155, 192, 230, 0.4);
      --card-shadow-color: rgba(155, 192, 230, 0.4);
+     --dropdown-shadow-color: rgba(155, 192, 230, 0.2);
      --text-shadow-color: rgba(0, 0, 0, 0.25);
+     --modal-button-shadow-color: rgba(142, 162, 134, 0.15);
      --button-shadow-color: rgba(142, 162, 134, 0.25);
      --text-button-shadow-color: rgba(142, 162, 134, 0.5);
      --container-background-color: #EAF1F9;
@@ -230,6 +232,8 @@ input:-ms-input-placeholder {
 
 .text-button {
      min-height: 44px;
+
+     z-index: 800;
 
      border-radius: 12px;
 
@@ -744,6 +748,70 @@ html, body {
      text-transform: none;
 
      font-size: 18px;
+}
+
+.dropdown-menu {
+     border: none;
+     border-radius: 12px;
+
+     z-index: 600;
+
+     box-shadow: 0px 0px 16px 16px var(--dropdown-shadow-color, black);
+}
+
+.dropdown-menu .text-button a {
+     font-size: 18px;
+}
+
+.dropdown-item.active, .dropdown-item:active, .dropdown-item:focus {
+     background-color: white !important;
+}
+
+.modal-content {
+     border: none;
+     border-radius: 12px;
+}
+
+.modal-header, .modal-footer {
+     border: none;
+}
+
+.modal-header {
+     font-family: 'baskerville-bold';
+}
+
+.modal-body {
+     font-family: 'whitney-semibold';
+}
+
+.modal-footer button {
+     background-color: var(--button-background-color, green);
+
+     width: 44px;
+
+     border-radius: 12px;
+     border: none;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     text-transform: uppercase;
+
+     font-family: 'whitney-semibold';
+     font-size: 18px;
+
+     transition: transform 0.5s;
+}
+
+.modal-footer button:hover, .modal-footer button:focus {
+     background-color: var(--button-background-color, green) !important;
+     box-shadow: 0px 0px 16px 16px var(--modal-button-shadow-color, black);
+
+     transform: scaleY(1.1) scaleX(1.1);
+
+     outline: none !important;
+     outline-width: 0 !important;
 }
 
 
