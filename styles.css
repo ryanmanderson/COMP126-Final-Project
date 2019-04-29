@@ -80,30 +80,6 @@ input:-ms-input-placeholder {
     to   { opacity: 1; }
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -236,6 +212,14 @@ input:-ms-input-placeholder {
      z-index: 800;
 
      border-radius: 12px;
+
+     color: var(--button-background-color, green) !important;
+     text-align: center;
+     text-transform: uppercase;
+     text-decoration: none;
+
+     font-family: 'whitney-semibold';
+     font-size: 24px;
 
      display: flex;
      align-items: center;
@@ -519,8 +503,6 @@ html, body {
 }
 
 #quick-links .card-body .logo {
-     height: 4vh;
-
      margin-top: 3vh;
      margin-bottom: 3vh;
 
@@ -531,6 +513,10 @@ html, body {
 
 #quick-links .card-body .logo a {
      width: 100%;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
 
 #quick-links .card-body .logo a:hover, #quick-links .card-body .logo a:focus {
@@ -544,6 +530,8 @@ html, body {
 
 #join-questions p {
      margin-bottom: 16px;
+
+     text-align: center;
 
      font-family: 'whitney-semibold';
      font-size: 22px;
@@ -814,6 +802,10 @@ html, body {
      outline-width: 0 !important;
 }
 
+#filter-icon {
+     font-size: 19px;
+}
+
 
 @media only screen and (max-width: 991px) {
 
@@ -894,7 +886,7 @@ html, body {
           padding: 0;
      }
 
-     #quick-links .card-body .logo img {
+     #quick-links .card-body .logo {
           width: auto;
           height: 54px;
      }
